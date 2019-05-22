@@ -1,32 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anazri <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/21 13:11:14 by anazri            #+#    #+#             */
-/*   Updated: 2019/05/21 15:12:03 by anazri           ###   ########.fr       */
+/*   Created: 2019/05/21 09:59:06 by anazri            #+#    #+#             */
+/*   Updated: 2019/05/21 10:29:35 by anazri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
 #include <stdio.h>
 
-int     ft_strcmp(const char *s1, const char *s2)
+int		ft_isascii(int c)
 {
-	int i;
-	
-	i = 0;
-	while((s1[i] == s2[i]) && (s1[i] != '\0') && (s2[i] != '\0'))
-		i++;
-
-	if(s1[i] != s2[i])
-		return (s1[i] - s2[i]);
-	return(0);
+	if (c >= 0 && c <= 177)
+		return (1);
+	else
+		return (0);
 }
 
-int		main()
+int		main(void)
 {
-	printf("%d", ft_strcmp("Hello", "Hello"));
+	int n;
+
+	n = 100;
+	printf("%d", ft_isascii(n));
 }

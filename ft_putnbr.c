@@ -1,32 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anazri <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/21 13:11:14 by anazri            #+#    #+#             */
-/*   Updated: 2019/05/21 15:12:03 by anazri           ###   ########.fr       */
+/*   Created: 2019/05/21 08:16:15 by anazri            #+#    #+#             */
+/*   Updated: 2019/05/21 08:44:07 by anazri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include <unistd.h>
 #include <stdio.h>
 
-int     ft_strcmp(const char *s1, const char *s2)
+int		ft_putnbr(int nbr)
 {
-	int i;
-	
-	i = 0;
-	while((s1[i] == s2[i]) && (s1[i] != '\0') && (s2[i] != '\0'))
-		i++;
 
-	if(s1[i] != s2[i])
-		return (s1[i] - s2[i]);
-	return(0);
+	write(1, &nbr, 1);
+	return (0);
 }
 
 int		main()
 {
-	printf("%d", ft_strcmp("Hello", "Hello"));
+	int n;
+
+	n = 0;
+	printf ("%d", ft_putnbr(n));
+	return (0);
 }

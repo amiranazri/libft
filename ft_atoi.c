@@ -6,7 +6,7 @@
 /*   By: anazri <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 08:23:38 by anazri            #+#    #+#             */
-/*   Updated: 2019/05/20 10:24:46 by anazri           ###   ########.fr       */
+/*   Updated: 2019/05/21 10:50:25 by anazri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,14 +16,16 @@ t_bool  is_digit(int c)
 {
     if (c >= 48 && c <= 57)
         return (true);
-    return (false);
+	else
+		return (false);
 }
 
 t_bool  is_space(int c)
 {
     if ((c >= 9 && c <= 13) || c == 32)
         return (true);
-    return (false);
+	else
+		return (false);
 }
 
 int     ft_atoi(char *str)
