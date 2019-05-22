@@ -1,31 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   strdup.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anazri <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/21 15:19:45 by anazri            #+#    #+#             */
-/*   Updated: 2019/05/22 10:55:22 by anazri           ###   ########.fr       */
+/*   Created: 2019/05/22 07:07:02 by anazri            #+#    #+#             */
+/*   Updated: 2019/05/22 11:19:02 by anazri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdio.h>
+#include "libft.h"
 
-char	*ft_strcpy(char *dest, const char *src)
+char		*ft_strdup(const char *s1)
 {
-	int i;
+	char *ret;
+	
+	if ((ret = (char *)malloc(ft_strlen(s1))))
+		ret = ft_strcpy(ret, s1);
+	return(ret);
+}
 
-	i = 0;
-	if (src == NULL || dest == NULL)
-		return (NULL);
-
-	while (src[i] != '\0')
-	{
-		dest[i] = src[i];
-		i++;
-	}
-	dest[i] = '\0';
-	return (dest);
+int			main(int ac, char **av)
+{
+	if (ac == 2)
+		printf("%s\n", ft_strdup(av[1]));
+	return (0);
 }
