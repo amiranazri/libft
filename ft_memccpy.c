@@ -1,45 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncat.c                                       :+:      :+:    :+:   */
+/*   memccpy.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anazri <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/23 15:33:59 by anazri            #+#    #+#             */
-/*   Updated: 2019/05/29 13:23:48 by anazri           ###   ########.fr       */
+/*   Created: 2019/05/29 06:51:36 by anazri            #+#    #+#             */
+/*   Updated: 2019/05/29 09:24:13 by anazri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 #include <stdio.h>
 
-char *ft_strncat(char *s1, const char *s2, size_t n)
+void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 {
 	size_t i;
-	size_t len;
+	unsigned char *dptr;
+	unsigned char *sptr;
 
 	i = 0;
-	len = 0;
-	while (s1[len] != '\0')
-		len++;
-	while ((s2[i] != '\0') && (i < n))
+	dptr = (unsigned char *)dst;
+	sptr = (unsigned char *)src;
+
+
+	while (i < n)
 	{
-		s1[len] = s2[i];
-		len++;
+		dptr[i] = sptr[i];
+		if (sptr[i] == (unsigned char)c)
+			return (dst + i + 1);
 		i++;
 	}
-	s1[len] = '\0';
-	return (s1);
+	return (NULL);
 }
 
-int main () 
+int    main(void)
 {
-	char src[50], dest[50];
-	
-	strcpy(src,  "This is source");
-	strcpy(dest, "This is destination");
-	ft_strncat(dest, src, 15);
-	printf("Final destination string : |%s|", dest);
-	
-	return(0);
+	char *msg = "This is the string: not copied";
+	char buffer[80];
+	memset(buffer, '\0', 80);
+	ft_memccpy(buffer, msg, 'i', 80);
+	printf("%s\n", buffer);
 }

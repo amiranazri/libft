@@ -1,45 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncat.c                                       :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anazri <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/23 15:33:59 by anazri            #+#    #+#             */
-/*   Updated: 2019/05/29 13:23:48 by anazri           ###   ########.fr       */
+/*   Created: 2019/05/29 13:59:22 by anazri            #+#    #+#             */
+/*   Updated: 2019/05/29 14:27:11 by anazri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 #include <stdio.h>
 
-char *ft_strncat(char *s1, const char *s2, size_t n)
+char	*strnstr(const char *haystack, const char *needle, size_t len)
 {
-	size_t i;
-	size_t len;
+	unsigned int i;
+	unsigned int n;
 
 	i = 0;
-	len = 0;
-	while (s1[len] != '\0')
-		len++;
-	while ((s2[i] != '\0') && (i < n))
+	n = 1;
+
+	if (!needle)
+		return ((char *) haystack);
+
+	while ((haystack[i] != '\0') && (size_t (i < len)))
 	{
-		s1[len] = s2[i];
-		len++;
+		if (haystack[i] == needle[0])
+		{
+			while ((needle[n] != '\0') && (haystack[i + n] == needle[n])\ 
+					&& (size_t (i + n) < len))
+				n++;
+			if (needle[n] == '\0')
+				return ((char *)&haystack[i]);
+		}
 		i++;
 	}
-	s1[len] = '\0';
-	return (s1);
-}
-
-int main () 
-{
-	char src[50], dest[50];
-	
-	strcpy(src,  "This is source");
-	strcpy(dest, "This is destination");
-	ft_strncat(dest, src, 15);
-	printf("Final destination string : |%s|", dest);
-	
-	return(0);
+	return (0);
 }
