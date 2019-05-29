@@ -1,24 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_strncpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anazri <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/21 08:16:15 by anazri            #+#    #+#             */
-/*   Updated: 2019/05/28 09:03:18 by anazri           ###   ########.fr       */
+/*   Created: 2019/05/23 10:46:55 by anazri            #+#    #+#             */
+/*   Updated: 2019/05/23 15:31:27 by anazri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stdio.h>
+#include <sting.h>
 
+char	*strncpy(char *dst, const char *src, size_t len)
+{
+	size_t i;
+
+	i = 0;
+	dest = (char *)malloc(sizeof(char)*n)
+		while (src[i] != '\0' && i < n)
+		{
+			dest[i] = src;
+			i++;
+		}
+	while (i < len)
+	{
+		dest[i] = '\0';
+		i++;
+	}
+	return (dest);
+}
 
 int		main()
 {
-	int n;
-
-	n = -2;
-	printf ("%d", ft_putnbr(n));
-	return (0);
 }

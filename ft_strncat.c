@@ -1,24 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_strncat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anazri <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/21 08:16:15 by anazri            #+#    #+#             */
-/*   Updated: 2019/05/28 09:03:18 by anazri           ###   ########.fr       */
+/*   Created: 2019/05/23 15:33:59 by anazri            #+#    #+#             */
+/*   Updated: 2019/05/23 16:08:47 by anazri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stdio.h>
+#include <string.h>
 
-
-int		main()
+char *strncat(char *s1, const char *s2, size_t n)
 {
-	int n;
 
-	n = -2;
-	printf ("%d", ft_putnbr(n));
-	return (0);
 }

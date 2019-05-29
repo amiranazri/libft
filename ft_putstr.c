@@ -1,24 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anazri <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/21 08:16:15 by anazri            #+#    #+#             */
-/*   Updated: 2019/05/28 09:03:18 by anazri           ###   ########.fr       */
+/*   Created: 2019/05/27 09:40:23 by anazri            #+#    #+#             */
+/*   Updated: 2019/05/27 10:53:26 by anazri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include <stdio.h>
 
+void	ft_putchar(char c, int fd);
 
-int		main()
+void	ft_putstr(char const *s)
 {
-	int n;
+	int i;
 
-	n = -2;
-	printf ("%d", ft_putnbr(n));
-	return (0);
+	i = 0;
+	while (s[i])
+	{
+		ft_putchar(s[i]);
+		i++;
+	}
 }

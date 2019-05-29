@@ -6,7 +6,7 @@
 /*   By: anazri <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 10:48:49 by anazri            #+#    #+#             */
-/*   Updated: 2019/05/21 13:05:06 by anazri           ###   ########.fr       */
+/*   Updated: 2019/05/23 12:59:57 by anazri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,7 @@
 
 int		ft_isalpha(int c)
 {
-	if ((c >= 65) && (c <= 90) && \
-				(c >= 97) && (c <= 122))
+	if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122))
 		return (1);
 	else
 		return (0);
@@ -32,9 +31,7 @@ int		ft_isdigit(int c)
 
 int		ft_isalnum(int c)
 {
-	if (ft_isalpha(c))
-		return (1);
-	if (ft_isdigit(c))
+	if (ft_isalpha(c) || ft_isdigit(c))
 		return (1);
 	else
 		return (0);
@@ -44,6 +41,6 @@ int		main(void)
 {
 	int n;
 
-	n = 18;
+	n = 'A';
 	printf("%d", ft_isalnum(n));
 }

@@ -1,24 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anazri <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/21 08:16:15 by anazri            #+#    #+#             */
-/*   Updated: 2019/05/28 09:03:18 by anazri           ###   ########.fr       */
+/*   Created: 2019/05/27 15:40:29 by anazri            #+#    #+#             */
+/*   Updated: 2019/05/27 15:51:07 by anazri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include <string.h>
 #include <stdio.h>
 
-
-int		main()
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	int n;
-
-	n = -2;
-	printf ("%d", ft_putnbr(n));
+	unsigned char *x = (unsigned char *)s;
+	while (n != '\0')
+	{
+		n--;
+		if (*x != (unsigned char) c)
+			x++;
+		else
+			return (x);
+		return (0);
+	}
 	return (0);
+}
+
+int main () {
+   const char str[] = "http://www.tutorialspoint.com";
+   const char ch = '.';
+   char *ret;
+
+   ret = memchr(str, ch, strlen(str));
+
+   printf("String after |%c| is - |%s|\n", ch, ret);
+
+   return(0);
 }

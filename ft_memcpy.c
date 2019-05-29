@@ -1,39 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   memcpy.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anazri <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/22 16:12:42 by anazri            #+#    #+#             */
-/*   Updated: 2019/05/23 10:03:25 by anazri           ###   ########.fr       */
+/*   Created: 2019/05/27 11:23:50 by anazri            #+#    #+#             */
+/*   Updated: 2019/05/28 10:08:10 by anazri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 #include <stdio.h>
 
-char		*ft_strchr(const char *s, int c)
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	int i;
+	char *dptr;
+	const char *sptr;
 	
-	i = 0;
-	while (s[i] != '\0')
-	{
-		if (s[i] == c)
-			return ((char *)s+i);
-		i++;
-	}
-	return (NULL);
+	dptr = dst;
+	sptr = src;
+
+	while (n--)
+		*dptr++ = *sptr++;
+	return (dst);
 }
 
-int main () 
-{
-	const char str[] = "hello.bitch";
-	const char ch = '.';
-	char *ret;
-	
-	ret = strchr(str, ch);
-	printf("String after |%c| is - |%s|\n", ch, ret);
-	return(0);
+int main () {
+   const char src[50] = "http://www.tutorialspoint.com";
+   char dest[50];
+   strcpy(dest,"Heloooo!!");
+   printf("Before memcpy dest = %s\n", dest);
+   memcpy(dest, src, strlen(src)+1);
+   printf("After memcpy dest = %s\n", dest);
+
+   return(0);
 }
