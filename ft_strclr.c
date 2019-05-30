@@ -1,32 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_strclr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anazri <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/21 13:11:14 by anazri            #+#    #+#             */
-/*   Updated: 2019/05/30 08:57:50 by anazri           ###   ########.fr       */
+/*   Created: 2019/05/30 13:26:04 by anazri            #+#    #+#             */
+/*   Updated: 2019/05/30 14:11:28 by anazri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdio.h>
+#include "libft.h"
 
-int     ft_strcmp(const char *s1, const char *s2)
+void	ft_strclr(char *s)
 {
-	int i;
-	
-	i = 0;
-	while((s1[i] == s2[i]) && (s1[i] != '\0') && (s2[i] != '\0'))
-		i++;
+	int len;
 
-	if(s1[i] != s2[i])
-		return (s1[i] - s2[i]);
-	return(0);
-}
-
-int		main()
-{
-	printf("%d", ft_strcmp("Hello", "Hello"));
+	len = 0;
+	while ((s != NULL) && (s[len]))
+	{
+		s[len] = '\0';
+		len++;
+	}
 }
