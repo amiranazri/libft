@@ -1,6 +1,17 @@
-
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: anazri <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/06/03 12:44:41 by anazri            #+#    #+#             */
+/*   Updated: 2019/06/03 13:01:58 by anazri           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 t_bool  ft_is_space(int c)
 {
@@ -14,7 +25,6 @@ char    *ft_strtrim(char const *s)
 {
     size_t i;
     size_t len;
-    char *str;
 
     i = 0;
     len = ft_strlen(s);
@@ -22,7 +32,17 @@ char    *ft_strtrim(char const *s)
         return (NULL);
         while (s[i] && ft_is_space(s[i]))
             i++;
-        str = ft_strncpy(str, s, len);
-        str[len] = '\0';
-        return (str);
+        while (ft_is_space(s[len]))
+				len--;
+		return (ft_strsub(s, i, i - len));
+}
+
+int		main()
+{
+	char *str;
+
+	str = " Hello bitch ";
+	ft_strtrim(str);
+	printf("%s", str);
+	return (0);
 }
