@@ -6,13 +6,13 @@
 /*   By: anazri <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/23 09:16:16 by anazri            #+#    #+#             */
-/*   Updated: 2019/05/23 09:17:49 by anazri           ###   ########.fr       */
+/*   Updated: 2019/06/07 08:56:23 by anazri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-int ft_str_is_printable(char *str)
+int ft_isprint(char *str)
 {
     int i;
     i = 0;

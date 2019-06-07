@@ -6,13 +6,13 @@
 /*   By: anazri <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/30 07:03:37 by anazri            #+#    #+#             */
-/*   Updated: 2019/05/30 07:03:40 by anazri           ###   ########.fr       */
+/*   Updated: 2019/06/07 10:01:13 by anazri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_putnbr(int n)
+void	ft_putnbr(int n)
 {
     if (n < 0)
     {

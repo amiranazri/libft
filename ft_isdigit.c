@@ -6,21 +6,18 @@
 /*   By: anazri <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 12:33:08 by anazri            #+#    #+#             */
-/*   Updated: 2019/05/21 12:39:43 by anazri           ###   ########.fr       */
+/*   Updated: 2019/06/07 08:54:22 by anazri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-int     ft_str_is_numeric(char *str)
+int     ft_isdigit(int c)
 {
-    int i;
-    i = 0;
-
-    while (str[i])
-    {
-        if((str[i] >= 48) && (str[i] <= 57))
-            return (1);
+	while (c)
+	{
+		if((c >= 48) && (c <= 57))
+			return (1);
     }
     return (0);
 }

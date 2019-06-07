@@ -1,33 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_strsub.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anazri <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/30 07:03:49 by anazri            #+#    #+#             */
-/*   Updated: 2019/06/07 09:19:26 by anazri           ###   ########.fr       */
+/*   Created: 2019/06/07 12:41:36 by anazri            #+#    #+#             */
+/*   Updated: 2019/06/07 16:11:47 by anazri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putnbr_fd(int n, int fd)
+char	*ft_strsub(char const *s, unsigned int start, size_t len)
 {
-    if (n < 0)
-    {
-        ft_putchar_fd('-');
-        n = n * -1;
-    }
+	size_t 	i;
+	char 	*str;
 
-    if (n >= 10)
-    {
-        ft_putnbr_fd(n / 10);
-        ft_putnbr_fd(n % 10);
-    }
-
-    if (n < 10)
-    {
-        ft_putchar_fd(48);
-    }
+	i = 0;
+	if (s == NULL || start > ft_strlen(s))
+		return (NULL);
+	if (!(str = (char *)malloc(sizeof(*str) *(len + 1))))
+		return (NULL);
+	while (i < len && s[start] != '\0')
+		str[i] = s[start + i++];
+	str[i] = '\0';
+	return (str);
 }

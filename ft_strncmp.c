@@ -6,13 +6,13 @@
 /*   By: anazri <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 13:16:29 by anazri            #+#    #+#             */
-/*   Updated: 2019/05/21 13:19:47 by anazri           ###   ########.fr       */
+/*   Updated: 2019/06/07 12:19:25 by anazri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 
-int		ft_strcmp(const char *s1, const char *s2, size_t n)
+int		ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	int i;
 

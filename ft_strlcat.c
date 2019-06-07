@@ -6,14 +6,14 @@
 /*   By: anazri <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/29 13:25:20 by anazri            #+#    #+#             */
-/*   Updated: 2019/05/29 13:53:08 by anazri           ###   ########.fr       */
+/*   Updated: 2019/06/07 09:59:54 by anazri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 #include <stdio.h>
 
-size_t strlcpy(char *dst, const char *src, size_t dstsize)
+size_t	strlcat(char *dst, const char *src, size_t dstsize)
 {
 	size_t i;
 	size_t len;
