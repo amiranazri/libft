@@ -10,27 +10,22 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <sting.h>
+#include "libft.h"
 
-char	*strncpy(char *dst, const char *src, size_t len)
+char	*ft_strncpy(char *dst, const char *src, size_t len)
 {
-	size_t i;
+    size_t i;
 
-	i = 0;
-	dest = (char *)malloc(sizeof(char)*n)
-		while (src[i] != '\0' && i < n)
-		{
-			dest[i] = src;
-			i++;
-		}
-	while (i < len)
-	{
-		dest[i] = '\0';
-		i++;
-	}
-	return (dest);
-}
-
-int		main()
-{
+    i = 0;
+    while (src[i] != '\0' && i < len)
+    {
+        dst[i] = src[i];
+        i++;
+    }
+    while (i < len)
+    {
+        dst[i] = '\0';
+        i++;
+    }
+    return (dst);
 }

@@ -10,14 +10,18 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 void	*ft_memalloc(size_t size)
 {
-unsigned char *store;
-
+    size_t          n;
+    unsigned char   *store;
+    
+    n = 0;
 	store = malloc(size);
 	if (store == NULL)
 		return (NULL);
 
-	ft_bzero(store);
+	ft_bzero(store, n);
 	return (store);
 }

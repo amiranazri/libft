@@ -1,33 +1,65 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anazri <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: dlinde <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/03 14:38:40 by anazri            #+#    #+#             */
-/*   Updated: 2019/06/07 08:57:20 by anazri           ###   ########.fr       */
+/*   Created: 2019/05/20 14:17:42 by dlinde            #+#    #+#             */
+/*   Updated: 2019/05/30 13:50:15 by dlinde           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_itoa(int n)
+static int	ft_size(long num)
+{
+	size_t	size;
+
+	size = 0;
+	if (num == 0)
+		return (1);
+	if (num < 0)
+	{
+		num *= -1;
+		size++;
+	}
+	while (num > 0)
+	{
+		num /= 10;
+		size++;
+	}
+	return (size);
+}
+
+char		*ft_itoa(int n)
 {
 	char	*str;
-	unsigned int		size;
-	unsigned int		con;
-	unsigned int		sign;
+	size_t	i;
+	size_t	len;
+	long	num;
 
-	size = 1;
-	sign = 0;
-	if (n < 0)
-		sign = n * -1;
-	con = n;
-	while (con /= 10)
-		i++;
-	str = ft_strnew(size + sign);
-	if (str == NULL)
+	num = n;
+	len = ft_size(num);
+	if (!(str = ft_strnew(len)))
 		return (NULL);
-
+	i = len - 1;
+	if (num == 0)
+	{
+		str[0] = 48;
+		return (str);
+	}
+	if (num < 0)
+	{
+		str[0] = '-';
+		num *= -1;
+	}
+	while (num > 0)
+	{
+		str[i] = (num % 10) + 48;
+		num /= 10;
+		i--;
+	}
+	str[len] = '\0';
+	return (str);
 }

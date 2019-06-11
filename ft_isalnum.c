@@ -36,11 +36,3 @@ int		ft_isalnum(int c)
 	else
 		return (0);
 }
-
-int		main(void)
-{
-	int n;
-
-	n = 'A';
-	printf("%d", ft_isalnum(n));
-}

@@ -13,28 +13,28 @@
 #include <string.h>
 #include <stdio.h>
 
-char	*strnstr(const char *haystack, const char *needle, size_t len)
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-	unsigned int i;
-	unsigned int n;
+    unsigned int i;
+    unsigned int n;
 
-	i = 0;
-	n = 1;
+    i = 0;
+    n = 1;
 
-	if (!needle)
-		return ((char *) haystack);
+    if (!needle)
+        return ((char *) haystack);
 
-	while ((haystack[i] != '\0') && (size_t (i < len)))
-	{
-		if (haystack[i] == needle[0])
-		{
-			while ((needle[n] != '\0') && (haystack[i + n] == needle[n])\ 
-					&& (size_t (i + n) < len))
-				n++;
-			if (needle[n] == '\0')
-				return ((char *)&haystack[i]);
-		}
-		i++;
-	}
-	return (0);
+    while ((haystack[i] != '\0') && ((size_t )i < len))
+    {
+        if (haystack[i] == needle[0])
+        {
+            while ((needle[n] != '\0') && (haystack[i + n] == needle[n])
+                    && (size_t )(i + n) < len)
+                n++;
+            if (needle[n] == '\0')
+                return ((char *)&haystack[i]);
+        }
+        i++;
+    }
+    return (0);
 }

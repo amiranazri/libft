@@ -10,9 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_putchar(char c, int fd);
+#include "libft.h"
 
 void	ft_putstr(char const *s)
 {

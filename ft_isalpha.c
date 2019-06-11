@@ -12,18 +12,20 @@
 
 #include "libft.h"
 
-int		ft_isalpha(char *str)
+int	ft_isalpha(int c)
 {
-	int i;
-
-	i = 0;
-	while (str[i])
-	{
-		if ((str[i] >= 65) && (str[i] <= 90) && \
-				(str[i] >= 97) && (str[i] <= 122))
-			return (true);
-		else
-			return (false);
-	}
-	return (false);
+	if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122))
+		return (1);
+	else
+		return (0);
 }
+
+/*
+   int	main()
+   {
+   char *str;
+   str = "T'es de quelle origine?";
+   ft_isalpha(str);
+   printf("%d", ft_isalpha);
+   }
+ */

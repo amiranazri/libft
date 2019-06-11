@@ -21,9 +21,9 @@ char		*ft_strdup(const char *s1)
 	return(ret);
 }
 
-int			main(int ac, char **av)
+/*int			main(int ac, char **av)
 {
 	if (ac == 2)
 		printf("%s\n", ft_strdup(av[1]));
 	return (0);
-}
+}*/

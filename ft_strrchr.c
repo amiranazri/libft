@@ -38,6 +38,7 @@ char *ft_strrchr(const char *s, int c)
 	return (NULL);
 }
 
+/*
 int		main()
 {
 	const char str[] = "hello.bitch.face.lol";
@@ -47,4 +48,4 @@ int		main()
 	ret = strrchr(str, ch);
 	printf("%s", ret);
 	return (0);
-}
+}*/
