@@ -5,23 +5,16 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: anazri <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/23 09:17:55 by anazri            #+#    #+#             */
-/*   Updated: 2019/05/23 09:18:33 by anazri           ###   ########.fr       */
+/*   Created: 2019/06/11 13:58:04 by anazri            #+#    #+#             */
+/*   Updated: 2019/06/11 14:00:48 by anazri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
-char *ft_strlowcase(char *str)
+int		tolower(int c)
 {
-    int i;
-    i = 0;
-
-    while(str[i] != '\0')
-    {
-        if ((i >= 'A' && i <= 'Z'))
-            str[i] = str[i] + 32;
-        i++;
-    }
-    return(str);
+	if (c >= 65 && c <= 90)
+		c = c + 32;
+	return (c);
 }

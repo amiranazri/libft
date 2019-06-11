@@ -34,7 +34,14 @@ int n;
 
 n = 'A';
 printf("%d", ft_isalnum(n));
- */
+
+//ft_strndup.c
+int	main()
+{
+	printf("%s", ft_strndup("mangotango", 5));
+	return (0);
+}
+*/
 
 int main(int ac, char **av)
 {

@@ -6,7 +6,7 @@
 /*   By: anazri <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/07 16:30:29 by anazri            #+#    #+#             */
-/*   Updated: 2019/06/07 16:32:13 by anazri           ###   ########.fr       */
+/*   Updated: 2019/06/11 17:07:49 by anazri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,6 @@ void	ft_putendl_fd(char const *s, int fd)
 	if (s == NULL)
 		return (NULL);
 	while (s[i] != '\0')
-		ft_putchar_fd(i++);
-	ft_putchar_fd('\n');
+		ft_putchar_fd(i++, fd);
+	ft_putchar_fd('\n', fd);
 }
