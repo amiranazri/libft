@@ -6,7 +6,7 @@
 /*   By: anazri <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/03 13:03:25 by anazri            #+#    #+#             */
-/*   Updated: 2019/06/11 14:38:35 by anazri           ###   ########.fr       */
+/*   Updated: 2019/06/12 19:20:08 by anazri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 ** Par3: c, deliminting character
 */
 
-static void split_words(char **result, const char *str, int c)
+static void		split_words(char **result, const char *str, int c)
 {
 	char	*start;
 	size_t	i;
@@ -28,7 +28,7 @@ static void split_words(char **result, const char *str, int c)
 
 	i = 0;
 	current = 0;
-	while(str[i])
+	while (str[i])
 	{
 		if (str[i] == c)
 			i++;
@@ -48,7 +48,7 @@ static void split_words(char **result, const char *str, int c)
 ** Name: ft_strsplit
 */
 
-char	**ft_strsplit(char const *s, char c)
+char			**ft_strsplit(char const *s, char c)
 {
 	size_t	wc;
 	size_t	i;

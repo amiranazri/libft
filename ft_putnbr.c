@@ -6,7 +6,7 @@
 /*   By: anazri <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/30 07:03:37 by anazri            #+#    #+#             */
-/*   Updated: 2019/06/07 10:01:13 by anazri           ###   ########.fr       */
+/*   Updated: 2019/06/12 09:19:10 by anazri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,18 @@
 
 void	ft_putnbr(int n)
 {
-    if (n < 0)
-    {
-        ft_putchar('-');
-        n = n * -1;
-    }
-
-    if (n >= 10)
-    {
-        ft_putnbr(n / 10);
-        ft_putnbr(n % 10);
-    }
-
-    if (n < 10)
-    {
-        ft_putchar(48);
-    }
+	if (n < 0)
+	{
+		ft_putchar('-');
+		n = n * -1;
+	}
+	if (n >= 10)
+	{
+		ft_putnbr(n / 10);
+		ft_putnbr(n % 10);
+	}
+	if (n < 10)
+	{
+		ft_putchar(48);
+	}
 }

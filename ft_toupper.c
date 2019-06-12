@@ -6,13 +6,13 @@
 /*   By: anazri <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/11 14:00:57 by anazri            #+#    #+#             */
-/*   Updated: 2019/06/11 17:40:49 by anazri           ###   ########.fr       */
+/*   Updated: 2019/06/12 19:13:03 by anazri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_toupper(char c)
+int		ft_toupper(int c)
 {
 	if (c >= 97 && c <= 122)
 		c = c - 32;
