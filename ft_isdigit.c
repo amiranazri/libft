@@ -6,18 +6,18 @@
 /*   By: anazri <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 12:33:08 by anazri            #+#    #+#             */
-/*   Updated: 2019/06/07 08:54:22 by anazri           ###   ########.fr       */
+/*   Updated: 2019/06/11 18:20:09 by anazri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-int     ft_isdigit(int c)
+int	ft_isdigit(int c)
 {
 	while (c)
 	{
-		if((c >= 48) && (c <= 57))
+		if ((c >= 48) && (c <= 57))
 			return (1);
-    }
-    return (0);
+	}
+	return (0);
 }

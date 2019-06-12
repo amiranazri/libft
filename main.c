@@ -1,4 +1,5 @@
 #include "libft.h"
+
 /*
 //ft_atoi.c
 int	main () {
@@ -41,8 +42,16 @@ int	main()
 	printf("%s", ft_strndup("mangotango", 5));
 	return (0);
 }
-*/
 
+//ft_isalpa
+int	main()
+{
+	char *str;
+	str = "T'es de quelle origine?";
+	ft_isalpha(str);
+	printf("%d", ft_isalpha);
+}
+*/
 int main(int ac, char **av)
 {
 	char 	**test;

@@ -6,7 +6,7 @@
 /*   By: anazri <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 10:16:01 by anazri            #+#    #+#             */
-/*   Updated: 2019/06/07 08:50:29 by anazri           ###   ########.fr       */
+/*   Updated: 2019/06/11 18:19:29 by anazri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,3 @@ int	ft_isalpha(int c)
 	else
 		return (0);
 }
-
-/*
-   int	main()
-   {
-   char *str;
-   str = "T'es de quelle origine?";
-   ft_isalpha(str);
-   printf("%d", ft_isalpha);
-   }
- */

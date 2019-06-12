@@ -6,7 +6,7 @@
 /*   By: anazri <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/27 11:23:50 by anazri            #+#    #+#             */
-/*   Updated: 2019/05/29 09:21:56 by anazri           ###   ########.fr       */
+/*   Updated: 2019/06/11 18:31:46 by anazri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,24 +15,12 @@
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	char *dptr;
-	const char *sptr;
-	
+	char		*dptr;
+	const char	*sptr;
+
 	dptr = dst;
 	sptr = src;
-
 	while (n--)
 		*dptr++ = *sptr++;
 	return (dst);
-}
-
-int main () {
-   const char src[50] = "http://www.tutorialspoint.com";
-   char dest[50];
-   strcpy(dest,"Heloooo!!");
-   printf("Before memcpy dest = %s\n", dest);
-   memcpy(dest, src, strlen(src)+1);
-   printf("After memcpy dest = %s\n", dest);
-
-   return(0);
 }
