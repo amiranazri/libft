@@ -6,7 +6,11 @@
 /*   By: anazri <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/27 09:40:23 by anazri            #+#    #+#             */
+<<<<<<< HEAD
 /*   Updated: 2019/06/14 15:14:57 by anazri           ###   ########.fr       */
+=======
+/*   Updated: 2019/06/13 12:47:06 by anazri           ###   ########.fr       */
+>>>>>>> 98baa23bb69e29cab71a997f242ae8be8b578a59
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +21,10 @@ void	ft_putstr(char const *s)
 	int i;
 
 	i = 0;
-	while (s[i])
-	{
-		ft_putchar(s[i]);
-		i++;
-	}
+	if (s)
+		while (s[i])
+		{
+			ft_putchar(s[i]);
+			i++;
+		}
 }
