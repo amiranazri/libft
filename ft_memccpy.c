@@ -6,7 +6,7 @@
 /*   By: anazri <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/29 06:51:36 by anazri            #+#    #+#             */
-/*   Updated: 2019/06/13 16:19:54 by anazri           ###   ########.fr       */
+/*   Updated: 2019/06/11 18:36:09 by anazri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,15 +29,4 @@ void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 		i++;
 	}
 	return (NULL);
-}
-
-int	main()
-{
-	char dest[50];
-	char src[50];
-
-	ft_strcpy(dest, "blah");
-	ft_strcpy(src, "boobs");
-	
-	ft_putstr(ft_memccpy(dest, src, 'o', 8));
 }
