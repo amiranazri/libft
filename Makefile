@@ -6,17 +6,17 @@
 #    By: anazri <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/23 08:05:30 by anazri            #+#    #+#              #
-#    Updated: 2019/06/11 14:47:42 by anazri           ###   ########.fr        #
+#    Updated: 2019/06/14 14:55:26 by anazri           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 HEADER = libft.h
-#flags for errors
+
 ERRORS = -Wall -Werror -Wextra
-#compilation
+
 CMP = -c -I $(HEADER)
-#C files
+
 SRC = ft_putendl_fd.c ft_strncat.c ft_putnbr.c ft_strncmp.c ft_atoi.c\
 	  ft_putnbr_fd.c ft_strncpy.c ft_bzero.c ft_putstr.c ft_strndup.c\
 	  ft_isalnum.c ft_putstr_fd.c ft_strnequ.c ft_isalpha.c ft_strcat.c\
