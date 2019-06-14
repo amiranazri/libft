@@ -6,7 +6,7 @@
 /*   By: anazri <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/13 09:21:40 by anazri            #+#    #+#             */
-/*   Updated: 2019/06/13 09:24:39 by anazri           ###   ########.fr       */
+/*   Updated: 2019/06/14 14:22:08 by anazri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int	ft_is_digit(int c)
 		return (0);
 }
 
-int	is_space(int c)
+int	ft_is_space(int c)
 {
 	if ((c >= 9 && c <= 13) || c == 32)
 		return (1);

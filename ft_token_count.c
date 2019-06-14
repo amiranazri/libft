@@ -6,7 +6,7 @@
 /*   By: anazri <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/11 11:19:19 by anazri            #+#    #+#             */
-/*   Updated: 2019/06/11 11:19:21 by anazri           ###   ########.fr       */
+/*   Updated: 2019/06/13 09:35:28 by anazri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,18 @@
 
 size_t	ft_token_count(char *str, int c)
 {
-	int 	i;
+	int		i;
 	size_t	count;
 	t_bool	tested;
-	
+
 	i = 0;
 	tested = false;
 	count = 0;
 	while (str[i])
-    {
+	{
 		if (str[i] == c && tested == false)
 			count += 1;
-		else if (str[i] == c && tested == true )
+		else if (str[i] == c && tested == true)
 			i++;
 		else
 			tested = false;
