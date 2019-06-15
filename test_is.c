@@ -17,7 +17,7 @@ int	main(int ac, char **av)
 	/*************************\
 	|* Boolean Function Test *|
 	\*************************/
-	if (ac == 2)
+/*	if (ac == 2)
 	{
 		(ft_isdigit(av[1][0])) ? ft_putendl("It is a digit") : 0;
 		(ft_isalpha(av[1][0])) ? ft_putendl("It is an alphabet") : 0;
@@ -25,8 +25,20 @@ int	main(int ac, char **av)
 		(ft_isascii(av[1][0])) ? ft_putendl("It is an ascii value.") : 0;
 		(ft_isprint(av[1][0])) ? ft_putendl("It is printable.") : 0;
 	}
+*/
 	/*************************\
 	|* 		Strings		 	  *|
 	\*************************/
+/*
+	if (ac == 3)
+		ft_putendl(ft_strdup(av[1]));
+*/
 
+	char *src;
+	char *dst;
+
+	src = ft_strdup("hello");
+	dst = ft_strdup("bitchface");
+	ft_putendl((char *)ft_memcpy(dst, src, 2));
+	return (0);
 }
