@@ -6,7 +6,7 @@
 /*   By: anazri <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/14 14:58:01 by anazri            #+#    #+#             */
-/*   Updated: 2019/06/14 23:03:24 by anazri           ###   ########.fr       */
+/*   Updated: 2019/06/17 10:02:22 by anazri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,10 +30,11 @@ int	main(int ac, char **av)
 	|* 		Strings		 	  *|
 	\*************************/
 /*
-	if (ac == 3)
+//ft_strdup	
+   if (ac == 3)
 		ft_putendl(ft_strdup(av[1]));
-*/
 
+//ft_memset
 	char *src;
 	char *dst;
 
@@ -41,4 +42,15 @@ int	main(int ac, char **av)
 	dst = ft_strdup("bitchface");
 	ft_putendl((char *)ft_memcpy(dst, src, 2));
 	return (0);
+
+
+
+
+//ft_strdup
+if (ac == 2)
+{
+}
+*/
+
+
 }
