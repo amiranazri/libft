@@ -16,8 +16,8 @@ char	*ft_strnew(size_t size)
 {
 	char *store;
 
-	if (!(store = (char *)malloc(size + 1)))
+	if (!(store = malloc(size + 1)))
 		return (NULL);
-	bzero(store, size + 1);
+	ft_strncpy(store, "\0", size + 1);
 	return (store);
 }
