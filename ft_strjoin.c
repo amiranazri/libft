@@ -21,13 +21,13 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	ret = (char *)malloc(ft_strlen(s1) + ft_strlen(s2) + 1);
 	if (s1 == NULL || s2 == NULL || ret == NULL)
 		return (NULL);
-	while (s1 != '\0')
+	while (*s1 != '\0')
 	{
 		ret[i] = *s1;
 		i++;
 		s1++;
 	}
-	while (s2 != '\0')
+	while (*s2 != '\0')
 	{
 		ret[i] = *s2;
 		i++;

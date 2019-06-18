@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-static int	ft_size(long num)
+static int	ft_size(intmax_t num)
 {
 	size_t	size;
 
@@ -32,7 +32,7 @@ static int	ft_size(long num)
 	return (size);
 }
 
-char		*ft_itoa(int n)
+char		*ft_itoa(intmax_t n)
 {
 	char	*str;
 	size_t	i;
