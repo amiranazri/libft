@@ -13,6 +13,23 @@
 #include "libft.h"
 
 /*
+
+//PART ONE
+
+//ft_atoi.c
+int	main ()
+{
+	int x;
+	char str[30];
+	ft_strcpy(str, "18061994");
+	x = atoi(str);
+	printf("String = %s, Integer = %d\n", str, x);
+	ft_strcpy(str, "hey gurl");
+	x = atoi(str);
+	printf("with atoi: String = %s, Integer = %d\n", str, x);
+	return(0);
+}
+
 //is_*.c
 int	main(int ac, char **av)
 {
@@ -35,6 +52,26 @@ int	main()
 	ft_putendl(ft_strncpy(dst, src, 1));
 }
 
+//ft_strcat.c
+int	main(int ac, char **av)
+{
+	if (ac == 3)
+		printf("%s", ft_strcat(av[1], av[2]));
+}
+
+//ft_strncat.c
+int main ()
+{
+	char src[50];
+	char dst[50];
+
+	ft_strcpy(src,  "This is source");
+	ft_strcpy(dst, "This is destination");
+	ft_strncat(dst, src, 15);
+	printf("New destination string : |%s|", dst);
+	return(0);
+}
+
 //ft_strlcat.c
 int	main()
 {
@@ -42,6 +79,21 @@ int	main()
 	char src[8] = "bitch";
 	ft_strlcat(dst, src, 8);
 	ft_putendl(dst);
+}
+
+//ft_strdup.c
+int	main(int ac, char **av)
+{
+	if (ac == 2)
+		printf("%s\n", ft_strdup(av[1]));
+		return (0);
+}
+
+//ft_strndup.c
+int	main()
+{
+	printf("%s", ft_strndup("mangotango", 5));
+	return (0);
 }
 
 //ft_memset.c
@@ -64,54 +116,29 @@ int	main()
 	//printf("Address of dest: %p\nAddress of ret: %p\n", src, ft_memcpy(dst, src, 4));
 }
 
+//PART TWO
 
-//ft_atoi.c
-int	main () 
-{
-	int x;
-	char str[30];
-	ft_strcpy(str, "18061994");
-	x = atoi(str);
-	printf("String = %s, Integer = %d\n", str, x);
-	ft_strcpy(str, "hey gurl");
-	x = atoi(str);
-	printf("with atoi: String = %s, Integer = %d\n", str, x);
-	return(0);
-}
-
-//ft_strdup.c
-int	main(int ac, char **av)
-{
-	if (ac == 2)
-		printf("%s\n", ft_strdup(av[1]));
-		return (0);
-}
-
-//ft_strndup.c
+//ft_memalloc.c
 int	main()
 {
-	printf("%s", ft_strndup("mangotango", 5));
-	return (0);
-}
+	int i;
+	char *new;
 
-//ft_strcat.c
-int	main(int ac, char **av)
-{
-	if (ac == 3)
-		printf("%s", ft_strcat(av[1], av[2]));
-}
-
-//ft_strncat.c
-int main ()
-{
-	char src[50];
-	char dst[50];
-
-	ft_strcpy(src,  "This is source");
-	ft_strcpy(dst, "This is destination");
-	ft_strncat(dst, src, 15);
-	printf("New destination string : |%s|", dst);
-	return(0);
+	i = 0;
+	new = (char *)ft_memalloc(8);
+	if (new == "NULL")
+		ft_putendl("NULL");
+		while (i < 8)
+		{
+			if (new[i] != 0)
+			{
+				ft_putendl("Pass");
+				return (0);
+			}
+			i++;
+		}
+		ft_putendl("Fail");
+		return (0);
 }
 
 //ft_strrchr.c
@@ -124,6 +151,39 @@ int	main()
 	ret = ft_strrchr(str, ch);
 	printf("%s", ret);
 	return (0);
+}
+
+//ft_strjoin.c
+int	main(int ac, char **av)
+{
+	if (ac == 3)
+	{
+		printf("%s, %s\n", av[1], av[2]);
+		ft_strjoin(av[1], av[2]);
+	}
+}
+
+*/
+
+//ft_strnew.c
+int	main()
+{
+	char *str;
+
+	str = "Test this!";
+	ft_putendl(str);
+	str = ft_strnew(4);
+	ft_putendl(str);
+}
+
+/*
+//ft_itoa.c
+int	main()
+{
+	int i;
+
+	i = 18;
+	ft_putendl(ft_itoa(i));
 }
 
 //ft_strtrim.c
@@ -153,16 +213,6 @@ int main(int ac, char **av)
 	}
 	ft_putchar(10);
 	return (0);
-}
-
-//ft_strjoin.c
-int	main(int ac, char **av)
-{
-	if (ac == 3)
-	{
-		printf("%s, %s\n", av[1], av[2]);
-		ft_strjoin(av[1], av[2]);
-	}
 }
 
 */

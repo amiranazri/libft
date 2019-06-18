@@ -16,7 +16,7 @@ char	*ft_strnew(size_t size)
 {
 	char *store;
 
-	if (!(store = malloc(size + 1)))
+	if (!(store = ft_memalloc(size + 1)))
 		return (NULL);
 	ft_strncpy(store, "\0", size + 1);
 	return (store);
