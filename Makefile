@@ -27,7 +27,7 @@ SRC = ft_putendl_fd.c ft_strncat.c ft_putnbr.c ft_strncmp.c ft_atoi.c\
 	  ft_striter.c ft_token_count.c ft_memcpy.c ft_striteri.c ft_tolower.c\
 	  ft_memdel.c ft_strjoin.c ft_toupper.c ft_memmove.c ft_strlcat.c ft_memset.c\
 	  ft_strlen.c ft_putchar.c ft_strlowcase.c ft_putchar_fd.c ft_strmap.c\
-	  ft_putendl.c ft_strmapi.c
+	  ft_putendl.c ft_strmapi.c ft_is_space.c
 
 OBC =  $(SRC:%.c=%.o)
 

@@ -6,29 +6,13 @@
 /*   By: anazri <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/13 09:21:40 by anazri            #+#    #+#             */
-/*   Updated: 2019/06/14 14:22:08 by anazri           ###   ########.fr       */
+/*   Updated: 2019/07/01 14:06:14 by anazri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_is_digit(int c)
-{
-	if (c >= 48 && c <= 57)
-		return (1);
-	else
-		return (0);
-}
-
-int	ft_is_space(int c)
-{
-	if ((c >= 9 && c <= 13) || c == 32)
-		return (1);
-	else
-		return (0);
-}
-
-int	ft_atoi(char *str)
+int	ft_atoi(const char *str)
 {
 	int i;
 	int num;
@@ -37,15 +21,17 @@ int	ft_atoi(char *str)
 	i = 0;
 	num = 0;
 	sign = 1;
-	while (ft_is_space(str[i]))
+	while (ft_is_space(str[i]) && str[i])
 		i++;
+	if (str[i] == 0)
+		return (0);
 	if (str[i] == 45 || str[i] == 43)
 	{
 		if (str[i] == 45)
 			sign = -1;
 		i++;
 	}
-	while (ft_is_digit(str[i]))
+	while (ft_isdigit(str[i]) && str[i])
 	{
 		num = (num * 10) + (str[i] - 48);
 		i++;

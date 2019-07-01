@@ -6,19 +6,11 @@
 /*   By: anazri <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/03 13:03:25 by anazri            #+#    #+#             */
-/*   Updated: 2019/06/12 19:20:08 by anazri           ###   ########.fr       */
+/*   Updated: 2019/06/30 11:28:33 by anazri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-/*
-** Name: Split Words
-** Func: Split several strings
-** Par1: result, array to fill with split words
-** Par2: str, string to be split
-** Par3: c, deliminting character
-*/
 
 static void		split_words(char **result, const char *str, int c)
 {
@@ -43,10 +35,6 @@ static void		split_words(char **result, const char *str, int c)
 	}
 	result[current] = NULL;
 }
-
-/*
-** Name: ft_strsplit
-*/
 
 char			**ft_strsplit(char const *s, char c)
 {

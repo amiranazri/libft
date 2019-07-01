@@ -18,16 +18,13 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	char			*con;
 
 	i = 0;
-	while (s != NULL && f != NULL)
+	if (!(con = ft_strnew(ft_strlen(s))))
+		return (NULL);
+	while (*s)
 	{
-		if (!(con = ft_strnew(ft_strlen(s))))
-			return (NULL);
-		while (*s)
-		{
-			con[i] = f(i, *s);
-			s++;
-			i++;
-		}
+		con[i] = f(i, *s);
+		s++;
+		i++;
 	}
 	return (con);
 }

@@ -15,19 +15,16 @@
 char	*ft_strmap(char const *s, char (*f)(char))
 {
 	unsigned int	i;
-	char			*con;
+	char			*temp;
 
 	i = 0;
-	while (s != NULL && f != NULL)
+	if (!(temp = ft_strnew(ft_strlen(s))))
+		return (NULL);
+	while (*s)
 	{
-		if (!(con = ft_strnew(ft_strlen(s))))
-			return (NULL);
-		while (*s)
-		{
-			con[i] = f(*s);
-			s++;
-			con++;
-		}
+		temp[i] = f(*s);
+		s++;
+		i++;
 	}
-	return (con);
+	return (temp);
 }
